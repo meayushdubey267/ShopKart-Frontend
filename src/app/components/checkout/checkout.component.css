@@ -1,0 +1,136 @@
+.main-content {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e3f0ff 0%, #e6e6fa 100%);
+  padding: 5rem 0 2rem 0; /* Top padding for navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
+  padding: 2.5rem 3rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.form-area {
+  background: #f8fbff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(140, 205, 235, 0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: #010d31;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  border-radius: 50px;
+  
+}
+
+label {
+  font-weight: 500;
+  color: #4f8cff;
+}
+
+.input-space {
+  margin-bottom: 1rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbe7ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f5fbff;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+.alert-danger {
+  background: #ffeaea;
+  color: #b71c1c;
+  border: 1px solid #ffbdbd;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.au-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #010d31;
+}
+
+.au-checkbox input[type="checkbox"] {
+  accent-color: #4f8cff;
+  margin-right: 0.5rem;
+}
+
+#card-element {
+  background: #f5fbff;
+  border: 1px solid #cbe7ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#card-errors {
+  color: #b71c1c;
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
+}
+#card-errors:empty {
+  display: none;
+}
+
+.form-area:last-child {
+  margin: 50;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-info, .btn-primary {
+  background: linear-gradient(90deg, #4f8cff 0%, #8CCDEB 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 2.2rem;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.btn-info:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #010d31 0%, #4f8cff 100%);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    padding: 1rem;
+  }
+  .form-area {
+    padding: 1rem 0.5rem;
+  }
+}
+strong{
+  font-weight: bolder;
+  color:rgb(4, 117, 4);
+}

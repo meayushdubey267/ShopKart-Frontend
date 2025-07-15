@@ -1,0 +1,100 @@
+/* Add this to your product-list.component.css */
+.main-content {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e3f0ff 0%, #e6e6fa 100%);
+  padding: 7rem 0 2rem 0;
+}
+ .product-box{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;         /* Set your desired width */
+  height: 300px;        /* Set your desired height */
+  box-sizing: border-box;
+  margin-bottom: 24px; 
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(140, 205, 235, 0.08);
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+.product-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(120deg, #8CCDEB 0%, #fca311 100%); */
+  background: linear-gradient(120deg, #aca5f4 0%, #122889 100%);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.product-box:hover {
+  transform: scale(1.07) translateY(-8px);
+  /* border-color: #fca311; */
+  border-color: #6c5eea;
+  z-index: 2;
+  box-shadow: 0 12px 32px rgba(140, 205, 235, 0.18), 0 1.5px 6px rgba(0,0,0,0.10);
+
+}
+product-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: filter 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.product-box:hover img {
+  filter: brightness(1.08) saturate(1.2) drop-shadow(0 4px 16px #8CCDEB55);
+}
+
+.product-box .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.product-box:hover::before {
+  opacity: 0.12;
+}
+
+.product-box .product-title,
+.product-box .product-price {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+
+.product-box .add-to-cart-btn {
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  /* margin-top: auto;
+  margin-bottom: 12px; */
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(252, 163, 17, 0.08);
+  z-index: 2;
+  position: relative;
+}
+.product-box .add-to-cart-btn:hover {
+  background: linear-gradient(90deg, #010d31 0%, #4f8cff 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+}

@@ -1,0 +1,10 @@
+<div class="login-status-header">
+  <div *ngIf="isAuthenticated && userEmail" class="login-status-user-info">
+    Welcome, <strong>{{ userEmail.split('@')[0] }}</strong>!
+  </div>
+  <button *ngIf="!isAuthenticated" (click)="login()" class="btn-grad">Login</button>
+  <button *ngIf="isAuthenticated" (click)="logout()" class="btn-grad">Logout</button>
+  <button  *ngIf="isAuthenticated" routerLink="/members" class="btn-grad ml-1"style="margin-left: 12px;">Member</button>
+    <button  *ngIf="isAuthenticated" routerLink="/order-history" class="btn-grad ml-1" style="margin-left: 12px;">Orders</button>
+
+</div>

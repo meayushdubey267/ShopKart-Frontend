@@ -1,0 +1,8 @@
+.total{
+  background-image: linear-gradient(
+    to right,
+    #c2c6f4 0%,
+    #9b9ec2 51%,
+    #c2c6f4 100%
+  );
+}

@@ -1,0 +1,103 @@
+.contact-us-container {
+  max-width: 500px;
+  max-height: fit-content;
+  margin: 7rem auto 2rem auto;
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.10);
+  text-align: left;
+}
+
+.contact-us-container h2 {
+  color: #4f8cff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contact-us-container input,
+.contact-us-container textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1.5px solid #b3c6e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f4f8ff;
+  color: #222;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px rgba(79, 140, 255, 0.07);
+}
+a{
+  text-decoration: none;
+}
+.contact-us-container input:focus,
+.contact-us-container textarea:focus {
+  border-color: #4f8cff;
+  background: #eaf2ff;
+  outline: none;
+  box-shadow: 0 0 0 2px #b3d1ff;
+}
+
+.contact-us-container p {
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact-us-container form > div {
+  margin-bottom: 1.1rem;
+}
+
+.contact-us-container label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #010d31;
+  font-weight: 500;
+}
+
+.contact-us-container input,
+.contact-us-container textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e3f0ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8fbff;
+  color: #222;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.contact-us-container input:focus,
+.contact-us-container textarea:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+.contact-us-container button[type="submit"] {
+  margin-top: 0.5rem;
+  padding: 0.7rem 2.2rem;
+  background: linear-gradient(90deg, #4f8cff 0%, #8CCDEB 100%);
+  border: none;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.13);
+}
+
+.contact-us-container button[type="submit"]:hover {
+  background: linear-gradient(90deg, #010d31 0%, #4f8cff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .contact-us-container {
+    padding: 1rem 0.5rem;
+  }
+}

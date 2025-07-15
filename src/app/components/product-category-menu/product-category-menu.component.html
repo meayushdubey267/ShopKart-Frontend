@@ -1,0 +1,16 @@
+<div class="category-menu">
+  <ul class="nav flex-column">
+    <li *ngFor="let tempProductCategory of productCategories" class="nav-item mb-2">
+      <a 
+        class="nav-link d-flex align-items-center gap-2 px-3 py-2 rounded category-link"
+        routerLink="/category/{{tempProductCategory.id}}" 
+        routerLinkActive="active-category"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i class="fa-solid" [class]="tempProductCategory['categoryIcon']"></i>
+
+        <span class="category-text">{{ tempProductCategory.categoryName }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
