@@ -11,6 +11,7 @@ export class OrderHistoryComponent implements OnInit {
 
   OrderHistoryList : OrderHistory[] = [];
   storage : Storage = sessionStorage ;
+   isLoading: boolean = true; // 👈 NEW
   
   constructor(private orderHistoryService : OrderHistoryService) { }
 
@@ -26,6 +27,7 @@ export class OrderHistoryComponent implements OnInit {
     this.orderHistoryService.getOrderHistory(theEmail).subscribe(
       data => {
         this.OrderHistoryList = data._embedded.orders
+        this.isLoading = false; // 👈 stop spinner
       }
     );  
 

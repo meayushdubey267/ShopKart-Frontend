@@ -13,6 +13,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductDetailsComponent implements OnInit {
 
   product! : Product ;
+  isLoading: boolean = true; // 🔹 Add loading flag
   constructor(private productService : ProductService , 
               private cartService : CartService,
               private route : ActivatedRoute) { }
@@ -29,6 +30,7 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.getProduct(theProductId).subscribe(
       data =>{
         this.product = data;
+        this.isLoading = false; // 🔹 Stop loading when data is received
       }
     )
   }

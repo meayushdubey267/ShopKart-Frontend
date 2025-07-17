@@ -2,7 +2,14 @@
   <div class="section-content section-content-p30">
     <h3>Your Orders</h3>
 
-    <div *ngIf="OrderHistoryList.length>0">
+    <!-- Spinner when loading -->
+    <div *ngIf="isLoading" class="text-center my-4">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div *ngIf="!isLoading && OrderHistoryList.length>0">
       <table class="table table-bordered">
         <tr>
           <th width="20%">
@@ -35,7 +42,7 @@
         </tr>
 
       </table>
-      <div *ngIf="OrderHistoryList.length==0" class="alert alert-warning col-md-12" role="alert">
+      <div *ngIf="!isLoading && OrderHistoryList.length==0" class="alert alert-warning col-md-12" role="alert">
           No Orders Found.
       </div>
     </div>

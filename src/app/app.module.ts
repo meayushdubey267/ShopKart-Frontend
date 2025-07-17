@@ -40,7 +40,6 @@ const routes: Routes=[
   { path: 'contact', component: ContactComponent },
   {path:'help',component:HelpComponent},
   {path:'',redirectTo:'/products',pathMatch:'full'}
-  // {path:'**',redirectTo:'/error',pathMatch:'full'},
 ]; 
 @NgModule({
   declarations: [

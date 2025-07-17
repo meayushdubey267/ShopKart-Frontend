@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
   currentCategoryId : number=1 ;
   previousCategoryId : number=1 ;
   searchMode : boolean = false;
+  isLoading: boolean = true;
 
   // new properties for pagination 
 
@@ -60,7 +61,7 @@ export class ProductListComponent implements OnInit {
 
     this.previousKeyword=theKeyword;
     console.log(`keyword: ${theKeyword} , thePageNumber: ${this.thePageNumber}`);
-    
+    this.isLoading = true; // ⬅️ Start loading
 
     // now search for the product using the given keyword
     this.productService.searchProductsPaginate(this.thePageNumber-1,
@@ -95,7 +96,7 @@ export class ProductListComponent implements OnInit {
     }
     this.previousCategoryId = this.currentCategoryId;
     console.log(`currentCategoryId = ${this.currentCategoryId} , thePageNumber = ${this.thePageNumber}`);
-    
+    this.isLoading = true; // ⬅️ Start loading
 
     // now get the products for that particular product id.
     this.productService.getProductListPaginate(this.thePageNumber-1 , 
@@ -115,6 +116,7 @@ export class ProductListComponent implements OnInit {
       this.thePageNumber = data.page.number + 1;
       this.thePageSize=data.page.size;
       this.theTotalElements=data.page.totalElements;
+       this.isLoading = false; // ⬅️ Stop loading
     };
   }
 
